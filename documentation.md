@@ -50,22 +50,22 @@ Now you need to set up some things for it to work
 
 4. Add a layer called **minimap**
 
-![photo](img/image\ 2.png)
-![photo](img/image\ 3.png)
+![photo](img/image2.png)
+![photo](img/image3.png)
 
 5. Add a tag called **target**
 
-![photo](img/image\ 4.png)
+![photo](img/image4.png)
 
 6. From Prefabs drag and Drop everything in our scene and unpack them
 
-![photo](img/image\ 6.png)
-![photo](img/image\ 7.png)
-![photo](img/image\ 8.png)
+![photo](img/image6.png)
+![photo](img/image7.png)
+![photo](img/image8.png)
 
 7. Delete Main Camera from the Hierarchy
 
-![photo](img/image\ 5.png)
+![photo](img/image5.png)
 
 ## Adding the map and making the navigation path
 
@@ -90,34 +90,34 @@ Here you can see the 3rd method take place:
 
 1. Copy and Paste your map with the textures folder in the Prefabs folder
 
-![photo](img/image\ 9.png)
-![photo](img/image\ 10.png)
+![photo](img/image9.png)
+![photo](img/image10.png)
 
 2. Drag and Drop the map inside the Hierarchy and Unpack the prefab (where you deleted the Main Camera)
 
-![photo](img/image\ 11.png)
-![photo](img/image\ 12.png)
+![photo](img/image11.png)
+![photo](img/image12.png)
 
 4. Find the tairen in the Hierarchy by clicking the floor in your Scene
 
 5. While the floor is selected go to the inspector(left)->Add Component and type
 Mesh Collider Enter
 
-![photo](img/image\ 13.png)
+![photo](img/image13.png)
 
 6. Now while the floor is selected go to Window(up right)->AI and click Navigation
 
-![photo](img/image\ 14.png)
+![photo](img/image14.png)
 
 7. After that a navigation tab will open in the left of your screen
 
 8. While the floor is selected again check the Navigation Static box
 
-![photo](img/image\ 15.png)
+![photo](img/image15.png)
 
 9. Go in the Bake tab inside navigation and press bake
 
-![photo](img/image\ 16.png)
+![photo](img/image16.png)
 
 10. Unity will figure out the floor and make it walkable for our player
 
@@ -127,11 +127,11 @@ Mesh Collider Enter
 
 2. Inspector -> Add Component -> Mesh Collider
 
-![photo](img/image\ 18.png)
+![photo](img/image18.png)
 
 3. In the ispector -> Navigation -> Navigation static -> !!!Specify Not Walkable and then bake like the last time
 
-![photo](img/image\ 17.png)
+![photo](img/image17.png)
 
 ## Making the map more beautiful
 
@@ -145,7 +145,7 @@ or download new Assets
 With some Unity magic and using some of the Terrain's features we can make our game beatuful
 I deleted the floor and kept only the houses an the wall and placed them on top of the Terrain, added some textures and lighting and...
 
-![photo](img/image\ 19.png)
+![photo](img/image19.png)
 
 ## Playing the Game inside Unity
 
@@ -157,21 +157,21 @@ don't put 2 true values inside cause it will give an error (won't affect the bui
 
 1. Go to File -> Build Settings
 
-![photo](img/image\ 20.png)
+![photo](img/image20.png)
 
 2. Select WebGl (probably you will need to press the Switch Platform button too else skip to the next step)
 
-![photo](img/image\ 21.png)
+![photo](img/image21.png)
 
 3. Click Build, select a file for the build to be stored in and you are all set
 
-![photo](img/image\ 22.png)
+![photo](img/image22.png)
 
 ## Uploading the WebGL to the site
 
 1. Zip the files from the build and upload them into our website
 
-![photo](img/image\ 23.png)
+![photo](img/image23.png)
 
 ## Some problems
 
