@@ -1,17 +1,15 @@
 # Overview
 
-1. Create a new project
-2. Copy and Paste my files
-3. Add the tag and layer
-4. Create the map and the navMesh
+1. [Create a new scene](#creating-a-new-scene)
+2. [Add the nesesery components](#adding-the-nesesery-components)
+3. [Set up the map](#adding-the-map-and-making-the-navigation-path)
+4. [Specify the obstacles of your player](#specifing-the-obstacles-of-our-player)
+5. [Polish some edges](#making-the-map-more-beautiful)
+6. [Want a test drive?](#playing-the-game-inside-unity)
+7. [Build the Project](#building-the-webgl)
+8. [Upload the Game](#uploading-the-webgl-to-the-site)
 
-# Some simple steps
-
-1. [Starting a new scene](#starting-a-new-scene)
-2. [Add the nesesery components](##add-the-nesesery-components)
-3. [Setting up the map](#adding-the-map-and-making-the-navigation-path)
-
-## Starting a new scene
+## Creating a new scene
 
 1. Download Unity Hub
 2. Start Unity Hub
@@ -27,7 +25,7 @@ You don't need Android
 Also you don't need Visual Studio so you can uncheck them both
 from the list if you want  
 
-## Add the nesesery components
+## Adding the nesesery components
 
 You have succesfully created a new Project  
 Now you need to set up some things for it to work  
@@ -172,9 +170,6 @@ don't put 2 true values inside cause it will give an error (won't affect the bui
 1. Zip the files from the build and upload them into our website
 
 ![photo](img/image23.png)
-
-## Some problems
-
 
 ```json
 image 18 is wrong
