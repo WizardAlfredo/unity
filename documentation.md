@@ -2,7 +2,7 @@
 
 1. [Create a new scene](#creating-a-new-scene)
 2. [Add the nesesery components](#adding-the-nesesery-components)
-3. [Set up the map](#adding-the-map-and-making-the-navigation-path)
+3. [Set up the map](#adding-a-map-and-creating-the-navigation-path)
 4. [Specify the obstacles of your player](#specifing-the-obstacles-of-our-player)
 5. [Polish some edges](#making-the-map-more-beautiful)
 6. [Want a test drive?](#playing-the-game-inside-unity)
@@ -32,17 +32,8 @@ Now you need to set up some things for it to work
 
 1. Navigate to the folder that you decided to store your project
 2. Download the *Packet For Download* and extract all the folders in it
-3. Copy and Paste all of them inside your **Assets** folder:
-   - Hovl Studio
-   - Minimap
-   - Plugins
-   - Prefabs
-   - Resources
-   - Scripts
-   - Standard Assets
-   - stone texture
-   - WebGL Support
-   - Wispy Sky
+3. Copy and Paste all of them inside your **Assets** folder  
+Your **Assets** folder must look something like:
 
 ![photo](img/image.png)
 
@@ -55,17 +46,18 @@ Now you need to set up some things for it to work
 
 ![photo](img/image4.png)
 
-6. From Prefabs drag and Drop everything in our scene and unpack them
+6. From the Prefabs folder drag and drop everything in our scene. Then unpack them
+completly
 
 ![photo](img/image6.png)
 ![photo](img/image7.png)
 ![photo](img/image8.png)
 
-7. Delete Main Camera from the Hierarchy
+7. Delete the Main Camera from the Hierarchy
 
 ![photo](img/image5.png)
 
-## Adding the map and making the navigation path
+## Adding a map and creating the navigation path
 
 For adding a map in Unity there are 3 options:  
 
@@ -73,43 +65,45 @@ For adding a map in Unity there are 3 options:
 - Importing a map from other software
 - Compining the above
 
-There are pros and cons to eatch method
+There are pros and cons to each method:
 
-Creating a map using the Unity3D Editor gives you the ability to
-use all the Unity's editor features but implies that
-you know how to use it and for many people that's not the case.
+1. Creating a map using the Unity3D Editor gives you the ability to
+use all of the Unity Editor's features but requires spending a lot
+of time figuring out how Unity works.
 
-If you want to import it from another 3D software you will lose a lot of features
-that Unity provides such as the Terrain Object (we will see that)
+2. Importing a map from other 3D software, will make you lose a lot of features
+that Unity provides, such as the Terrain Object (we will see that)
 
-So many developers combine this methods and use them to maximize their productivity
+3. So many developers combine this methods and use them to maximize their productivity
 
-Here you can see the 3rd method take place:
+Let's first see how to impliment the second method
 
-1. Copy and Paste your map with the textures folder in the Prefabs folder
+1. Copy and Paste the folder that you stored your map in the folder: Prefabs
 
 ![photo](img/image9.png)
 ![photo](img/image10.png)
 
-2. Drag and Drop the map inside the Hierarchy and Unpack the prefab (where you deleted the Main Camera)
+2. Drag and Drop the map inside the Hierarchy (where you deleted the Main Camera)
+and unpack the prefab completly
 
 ![photo](img/image11.png)
 ![photo](img/image12.png)
 
-4. Find the tairen in the Hierarchy by clicking the floor in your Scene
+4. Click the floor in your Scene
 
-5. While the floor is selected go to the inspector(left)->Add Component and type
-Mesh Collider Enter
+5. While the floor is selected go to the Inspector -> Add Component
+and type: Mesh Collider. Then press Enter.
 
 ![photo](img/image13.png)
 
-6. Now while the floor is selected go to Window(up right)->AI and click Navigation
+6. While the floor is selected go to Window -> AI and click Navigation
 
 ![photo](img/image14.png)
 
 7. After that a navigation tab will open in the left of your screen
 
 8. While the floor is selected again check the Navigation Static box
+and select the Walkable option
 
 ![photo](img/image15.png)
 
@@ -121,35 +115,50 @@ Mesh Collider Enter
 
 ## Specifing the obstacles of our player
 
-1. Select all the houses, walls, objects from your imported map that you want to behave like real objects (A quick way is to find them in the hiererchy and select them with Ctrl + Click)
+1. Select all the houses, walls, objects, etc. from your imported map that you 
+want to behave like real objects
+(A quick way to do that is to find them in the hiererchy and
+select them with Ctrl + Click)
 
-2. Inspector -> Add Component -> Mesh Collider
+2. In the Inspector -> Add Component and type: Mesh Collider. Then press Enter
 
 ![photo](img/image18.png)
 
-3. In the ispector -> Navigation -> Navigation static -> !!!Specify Not Walkable and then bake like the last time
+3. Again in the Ispector click the Navigation tab -> check the Navigation
+static box!!!Specify Not Walkable and then bake like the last time
 
 ![photo](img/image17.png)
 
 ## Making the map more beautiful
 
-Here is where the problem with the first method beggins. A really nice feature the Unity has is the Terain Object
-If you build your map on top of a Terain Unity gives you the ability to add textures, trees, water and many more stuff
-pretty easy.
+Here is where the problem with the second method beggin.
+A really nice feature that Unity has, is the Terain Object.
+If you build your map on top of a Terain, Unity gives you the ability to add textures,
+trees, water and many more things without complications.
 
-So if you choose not to use terrains, you will have to rely on you 3D program of preference or the Unity Asset Store to make 
-or download new Assets
+If you choose not to use terrains, you will have to rely on you 3D program
+of preference or the Unity Asset Store to make or download new Assets.
 
-With some Unity magic and using some of the Terrain's features we can make our game beatuful
-I deleted the floor and kept only the houses an the wall and placed them on top of the Terrain, added some textures and lighting and...
+With some Unity magic and using some of the Terrain's features we can make our
+game beautiful.
+I deleted the floor and kept only the houses and the wall. I placed them on
+top of the Terrain, added some textures and Post Procecing effects and...
 
 ![photo](img/image19.png)
 
+If you want to learn how to use the terrain and make your game look beautiful
+some useful resources are:  
+[Gorgeous terrain is SUPER EASY](https://www.youtube.com/watch?v=aQUJ9qMMhlQ)  
+[How to make Terrain in Unity](https://www.youtube.com/watch?v=MWQv2Bagwgk)  
+[Using Post-Processing to improve visuals in Unity](https://www.youtube.com/watch?v=_PzYAbPpK8k)
+
 ## Playing the Game inside Unity
 
-Our Game can be played inside of Unity for Testing perposes with just clicking the play button
-If you want to test all of the modes you can do that by changing the contents of .json. But be careful
-don't put 2 true values inside cause it will give an error (won't affect the build tho).
+Our Game can be played inside Unity for testing purposes with just clicking
+the play button. If you want to test all of the modes you can do that by changing
+the contents of example.json, the location of this file is in Assets/Resources.
+But be careful don't put 2 true values inside cause it will break the game
+until you change it back (Won't affect the build).
 
 ## Building the WebGL
 
@@ -157,7 +166,8 @@ don't put 2 true values inside cause it will give an error (won't affect the bui
 
 ![photo](img/image20.png)
 
-2. Select WebGl (probably you will need to press the Switch Platform button too else skip to the next step)
+2. Select WebGl (probably you will need to press the Switch Platform button too
+else skip to the next step)
 
 ![photo](img/image21.png)
 
@@ -172,9 +182,4 @@ don't put 2 true values inside cause it will give an error (won't affect the bui
 ![photo](img/image23.png)
 
 ```json
-image 18 is wrong
-you didn't check the webgl box  
-tags problems Media, target, current_priority, current_type, current_url,
-current_description  
-player falls from the floor
 ```
